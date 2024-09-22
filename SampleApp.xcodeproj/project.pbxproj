@@ -24,6 +24,9 @@
 		06A89838286C0FFC00F773B5 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A89837286C0FFC00F773B5 /* TableViewDataSource.swift */; };
 		06A8983A286C165A00F773B5 /* WordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A89839286C165A00F773B5 /* WordResponse.swift */; };
 		06A8983C286C168800F773B5 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A8983B286C168800F773B5 /* Meta.swift */; };
+		403C22CD2CA0B04C00CF7090 /* Hwi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C22CC2CA0B04A00CF7090 /* Hwi.swift */; };
+		403C22CF2CA0B12900CF7090 /* Prs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C22CE2CA0B11C00CF7090 /* Prs.swift */; };
+		403C22D12CA0B27E00CF7090 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C22D02CA0B24900CF7090 /* Clip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		06A89837286C0FFC00F773B5 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		06A89839286C165A00F773B5 /* WordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordResponse.swift; sourceTree = "<group>"; };
 		06A8983B286C168800F773B5 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		403C22CC2CA0B04A00CF7090 /* Hwi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hwi.swift; sourceTree = "<group>"; };
+		403C22CE2CA0B11C00CF7090 /* Prs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prs.swift; sourceTree = "<group>"; };
+		403C22D02CA0B24900CF7090 /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 		062E352F286CC5B10072B38E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				403C22D02CA0B24900CF7090 /* Clip.swift */,
+				403C22CE2CA0B11C00CF7090 /* Prs.swift */,
+				403C22CC2CA0B04A00CF7090 /* Hwi.swift */,
 				06A8982D286BF07B00F773B5 /* Word.swift */,
 				06A89839286C165A00F773B5 /* WordResponse.swift */,
 				06A8983B286C168800F773B5 /* Meta.swift */,
@@ -305,8 +314,11 @@
 				06A8983C286C168800F773B5 /* Meta.swift in Sources */,
 				06A8982E286BF07B00F773B5 /* Word.swift in Sources */,
 				06A897FC286BEBA500F773B5 /* SceneDelegate.swift in Sources */,
+				403C22D12CA0B27E00CF7090 /* Clip.swift in Sources */,
 				06A89832286BF3D200F773B5 /* APIError.swift in Sources */,
+				403C22CD2CA0B04C00CF7090 /* Hwi.swift in Sources */,
 				06A8982A286BEECA00F773B5 /* Tokens.swift in Sources */,
+				403C22CF2CA0B12900CF7090 /* Prs.swift in Sources */,
 				06A89838286C0FFC00F773B5 /* TableViewDataSource.swift in Sources */,
 				06A8982C286BF00800F773B5 /* API.swift in Sources */,
 			);

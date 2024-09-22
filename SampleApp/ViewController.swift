@@ -52,13 +52,9 @@ class ViewController: UIViewController {
     
     //If Audio Example button is pressed, play pronunciation clip
     @IBAction func didPlayAudio(_ sender: UIButton) {
-        var player: AVAudioPlayer?
-        do {
-            player = try AVAudioPlayer(contentsOf: audioURL!)
-            player?.play()
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        let item = AVPlayerItem(url: audioURL!)
+        let player = AVPlayer(playerItem: item)
+        player.playImmediately(atRate: 1.0)
     }
     
     override func viewDidLoad() {

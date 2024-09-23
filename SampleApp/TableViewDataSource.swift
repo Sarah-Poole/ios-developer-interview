@@ -47,10 +47,14 @@ extension TableViewDataSource: UITableViewDataSource {
         if indexPath.row == 0 {
             cell.textLabel?.text = "word:"
             cell.detailTextLabel?.text = word.text
+        } else if indexPath.row == 1 {
+            cell.textLabel?.text = "pronunciation:"
+            cell.detailTextLabel?.text = word.pronunciation.hw
         } else {
             cell.textLabel?.text = "definition:"
             cell.detailTextLabel?.text = word.definitions[indexPath.row - 1]
         }
+        
         return cell
     }
 }

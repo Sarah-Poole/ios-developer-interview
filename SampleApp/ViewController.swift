@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     var dataSource = TableViewDataSource(state: .empty)
+    var audioURL = URL(string: "")
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -31,6 +33,14 @@ class ViewController: UIViewController {
                     self.tableView.reloadData()
                 }
                 
+                //Get Pronunciation Audio Clip URL
+                guard let audio = r.hwi.prs?.first!.sound.audio else {
+                    return
+                }
+                let subdirectory = audio.first!
+                let audioURLString = "https://media.merriam-webster.com/audio/prons/en/us/mp3/\(subdirectory)/\(audio).mp3"
+                self.audioURL = URL(string: audioURLString)
+                
             case .failure(let error):
                 self.dataSource.updateState(.empty) {
                     self.tableView.reloadData()
@@ -38,6 +48,13 @@ class ViewController: UIViewController {
                 print("NETWORK ERROR: ", error.localizedDescription)
             }
         }
+    }
+    
+    //If Audio Example button is pressed, play pronunciation clip
+    @IBAction func didPlayAudio(_ sender: UIButton) {
+        let item = AVPlayerItem(url: audioURL!)
+        let player = AVPlayer(playerItem: item)
+        player.playImmediately(atRate: 1.0)
     }
     
     override func viewDidLoad() {
